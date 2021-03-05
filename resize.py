@@ -5,7 +5,7 @@ factor = 10
 def m(x):
     return (x/factor)/2
 
-borders = {"x":{"starting":0, "ending":0, "total":15200}, "y":{"starting":0, "ending":0, "total":9500}}
+borders = {"x" : {}, "y" : {}}
 
 print(os.popen("xsetwacom --list devices").read())
 device_id = input("enter id of pencil : ")
