@@ -24,5 +24,9 @@ for i in borders:
 
 
 command = f'xsetwacom --set {device_id} area {borders["x"]["starting"]} {borders["y"]["starting"]} {borders["x"]["ending"]} {borders["y"]["ending"]}'
+os.system("xrandr --listmonitors")
+screen = input("Xrandr name of your monitor : ")
+fix = f"xsetwacom --set {device_id} MapToOutput {screen}"
 
 os.system(command)
+os.system(fix)
